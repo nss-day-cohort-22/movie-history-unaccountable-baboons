@@ -1,4 +1,4 @@
-<!doctype html> 
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -21,5 +21,18 @@
   <footer></footer>
 
   <script src="./scripts/main.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
+      authDomain: "movie-history-2debf.firebaseapp.com",
+      databaseURL: "https://movie-history-2debf.firebaseio.com",
+      projectId: "movie-history-2debf",
+      storageBucket: "movie-history-2debf.appspot.com",
+      messagingSenderId: "737577620281"
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 </html>
