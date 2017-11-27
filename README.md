@@ -1,6 +1,6 @@
 # Movie History
 
-You will be split up into teams of three, and your team will build a new application to keep track of movies that you have seen, and want to see, with your own ratings.
+You will be split up into teams, and your team will build a new application to keep track of movies that you have seen, and want to see, with your own ratings.
 * https://www.themoviedb.org
 * Request an api key
 
