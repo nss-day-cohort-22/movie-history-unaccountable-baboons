@@ -13,8 +13,8 @@ module.exports = function foo(grunt) {
       },
       uglify: {
             options: {
-                banner: "/*! <%= pkg.name %> <%= grunt.template.today(yyyy-mm-dd) %> */
-"
+                banner: `/*! <%= pkg.name %> <%= grunt.template.today(yyyy-mm-dd) %> */
+`
             },
             build: {
                 files: [{
@@ -40,13 +40,13 @@ module.exports = function foo(grunt) {
         ],
       },
     });
-  
+
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("gruntify-eslint");
     grunt.loadNpmTasks("grunt-browserify");
-  
+
     // Default task(s).
     grunt.registerTask("default", ["eslint", "browserify", "uglify", "watch"]);
   };
