@@ -5,6 +5,7 @@ You will be split up into teams, and your team will build a new application to k
 * Request an api key
 
 ## Requirements
+
 1. Must have the ability to register a user in Firebase
 1. Must have the ability to log in
 1. You must use Firebase to store movies
@@ -17,8 +18,7 @@ You will be split up into teams, and your team will build a new application to k
    1. Movie poster, if available
    1. An integer rating of 1-5
    1. A boolean value that, if true, means that you have watched the movie
-1. You must be using an automation tool to automate JavaScript linting
-1. You must be using an automation tool to automate SASS compilation
+1. Use Grunt to automate all the tasks needed during development.
 1. For the layout, we suggest Bootstrap, but if you want to stretch your legs, you can try [Materialize](http://materializecss.com/).
 1. Use of project tickets and features
 
