@@ -4,35 +4,84 @@
   <meta charset="utf-8">
   <title>Nashville Software School</title>
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
-  <nav></nav>
+  <!-- Begin Main Navigation -->
+  <header>
+    <h1>MOVIE HISTORY</h1>
+    <nav>
+      <a href="#" target="_blank">Find New Moview</a>
+      <a href="#" target="_blank">Search Your Movies</a>
+      <button class="login" type="submit" name="login">Login</button>
+      <button class="logout" type="reset" name="logout">Logout</button>
+    </nav>
+  </header>
 
-  <header></header>
+  <!-- Begin Welcome message -->
+  <section class="welcome">
 
-  <article>
-    <header></header>
-    <section></section>
-    <footer></footer>
-  </article>
+  </section>
 
+  <!-- Begin login form -->
+  <section class="login">
+
+    <div class="login__form">
+      <input type="email" name="email">
+      <input type="password" name="password">
+    </div>
+
+    <div class="buttons"></div>
+      <button class="login" type="submit" name="login">Login</button>
+      <button class="register" type="submit" name="register">Register</button>
+  </section>
+
+ <!--Begin section for filtering watched or unwatched  -->
+  <section class="watch unwatched">
+
+    <div class="watchlist__card">
+
+      <button type="button" name="watchlist">Add to Watchlist</button>
+    </div>
+
+    <div class="tracked__card">
+
+      <button type="button" name="watched">Watched</button>
+    </div>
+
+    <div class="rated__card">
+
+        <!-- Begin Star Rating System -->
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    </div>
+
+  </section>
+
+  <!-- Begin Footer -->
   <footer></footer>
 
-  <script src="./scripts/main.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
-      authDomain: "movie-history-2debf.firebaseapp.com",
-      databaseURL: "https://movie-history-2debf.firebaseio.com",
-      projectId: "movie-history-2debf",
-      storageBucket: "movie-history-2debf.appspot.com",
-      messagingSenderId: "737577620281"
-    };
-    firebase.initializeApp(config);
+  <!-- Begin Scripts -->
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
+    authDomain: "movie-history-2debf.firebaseapp.com",
+    databaseURL: "https://movie-history-2debf.firebaseio.com",
+    projectId: "movie-history-2debf",
+    storageBucket: "movie-history-2debf.appspot.com",
+    messagingSenderId: "737577620281"
+  };
+  firebase.initializeApp(config);
   </script>
+
+  <script src="./build/bundle.js"></script>
 </body>
 </html>

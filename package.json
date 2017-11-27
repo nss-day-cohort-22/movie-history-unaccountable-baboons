@@ -16,5 +16,9 @@
     "grunt-contrib-watch": "^1.0.0",
     "gruntify-eslint": "^4.0.0",
     "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony"
+  },
+  "dependencies": {
+    "firebase": "^4.6.2",
+    "jquery": "^3.2.1"
   }
 }
