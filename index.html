@@ -12,15 +12,19 @@
 
   <header></header>
 
-  <article>
+  <article id="moviedisplay">
     <header></header>
     <section></section>
     <footer></footer>
   </article>
+  <form>
+    Movie Title:<br>
+    <input type="text" name="movietitle"><br>
+    <button type="button" class="searchbutton">Search for Movie!</button>
+  </form>
 
   <footer></footer>
 
-  <script src="./scripts/main.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -33,6 +37,11 @@
       messagingSenderId: "737577620281"
     };
     firebase.initializeApp(config);
-  </script>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="./build/bundle.js"></script>
+  
 </body>
 </html>

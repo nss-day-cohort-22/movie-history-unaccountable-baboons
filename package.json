@@ -13,8 +13,10 @@
     "eslint-plugin-import": "^2.8.0",
     "grunt": "^1.0.1",
     "grunt-browserify": "^5.2.0",
+    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
     "grunt-contrib-watch": "^1.0.0",
     "gruntify-eslint": "^4.0.0",
-    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony"
-  }
+    "moviedb": "^0.2.10"
+  },
+  "dependencies": {}
 }
