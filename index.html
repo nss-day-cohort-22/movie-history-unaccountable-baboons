@@ -2,15 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Nashville Software School</title>
+  <title>Seen-ima</title>
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
 
 </head>
 
 <body>
-  <nav></nav>
+  <!-- Begin Main Navigation -->
+  <header>
+    <h1>MOVIE HISTORY</h1>
+    <nav>
+      <a href="#" target="_blank">Find New Movies</a>
+      <a href="#" target="_blank">Search Your MovieList</a>
+      <button class="login" type="submit" name="login">Login</button>
+      <button class="logout" type="reset" name="logout">Logout</button>
+    </nav>
+  </header>
 
-  <header></header>
+  <!-- Begin Welcome message -->
+  <section class="welcome">
+
+  </section>
+
+  <!-- Begin login form -->
+  <section class="login ">
+    <form id="loginForm" method="POST">
+      Email: <input class="login__email" type="email" placeholder="Example@example.com" name="email"> Password: <input class="login__password" type="password" placeholder="Enter Password"
+        name="psw">
+    </form>
+    <button id="loginBtn" class="login__submit" type="submit">Login</button>
+    <button id="registerBtn" class="register__submit" type="submit">Create New Account</button>
+  </section>
+
+ <!--Begin section for filtering watched or unwatched  -->
+  <section class="watch unwatched">
+
+    <!-- Begin Add to Watchlist Cards -->
+    <div class="watchlist__card">
+
+      <button type="button" name="watchlist">Add to Watchlist</button>
+    </div>
+
 
   <article id="moviedisplay">
     <header></header>
@@ -23,25 +61,48 @@
     <button type="button" class="searchbutton">Search for Movie!</button>
   </form>
 
+    <!-- Begin cards for tracking unwatched movies -->
+    <div class="tracked__card">
+
+      <button type="button" name="watched">Watched</button>
+    </div>
+
+    <!-- Begin cards for tracking watched movies -->
+    <div class="rated__card">
+
+        <!-- Begin Star Rating System -->
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    </div>
+
+  </section>
+
+  <!-- Begin Footer -->
   <footer></footer>
 
-  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
-      authDomain: "movie-history-2debf.firebaseapp.com",
-      databaseURL: "https://movie-history-2debf.firebaseio.com",
-      projectId: "movie-history-2debf",
-      storageBucket: "movie-history-2debf.appspot.com",
-      messagingSenderId: "737577620281"
-    };
-    firebase.initializeApp(config);
-    </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"
-    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-    crossorigin="anonymous"></script>
-    <script src="./build/bundle.js"></script>
-  
+
+  <!-- Begin Scripts -->
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
+    authDomain: "movie-history-2debf.firebaseapp.com",
+    databaseURL: "https://movie-history-2debf.firebaseio.com",
+    projectId: "movie-history-2debf",
+    storageBucket: "movie-history-2debf.appspot.com",
+    messagingSenderId: "737577620281"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <!--Import jQuery and materialize (jquery must be called first)-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script src="./build/bundle.js"></script>
 </body>
 </html>
