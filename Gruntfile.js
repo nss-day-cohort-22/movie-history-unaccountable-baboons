@@ -13,7 +13,7 @@ module.exports = function foo(grunt) {
       },
       uglify: {
             options: {
-                banner: "/*! <%= pkg.name %> <%= grunt.template.today('yyyy-mm-dd') %> */"
+                banner: "/*! <%= pkg.name %> <%= grunt.template.today('yyyy-mm-dd') %> */\n"
             },
             build: {
                 files: [{
