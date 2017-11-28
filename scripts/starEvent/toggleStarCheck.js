@@ -1,3 +1,4 @@
+
 //Required files....
 const $ = require("jquery");
 
@@ -6,5 +7,6 @@ const starReview = function() {
        $(this).toggleClass("checked");
    });
 }
+
 
 module.exports = starReview;
