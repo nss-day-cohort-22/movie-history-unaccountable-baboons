@@ -36,7 +36,6 @@ const auth = Object.create(null, {
             })
             // //click event for register
             $(".register__submit").on("click", e => {
-                debugger
                 //throw error if input fields are blank
                 if (email.val() === "" || password.val() === "") {
                     alert("Email and password fields cannot be blank. Please check fields and try again")
