@@ -1,4 +1,17 @@
-// Required files...
+
+//Required files...
+const $ = require("jquery");
 const auth = require("./authenticate")
+const starReview = require("./starEvent/toggleStarCheck");
+const movieListener = require("./findNewMovieEventListener")
+const movieSearch = require("./searchMovieData")
+
+
+
+
+// Required functions...
 
 auth.init()
+movieListener();
+starReview()
+

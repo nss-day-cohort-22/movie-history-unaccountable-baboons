@@ -5,6 +5,11 @@
   <title>Seen-ima</title>
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+
 
 </head>
 
@@ -13,8 +18,8 @@
   <header>
     <h1>MOVIE HISTORY</h1>
     <nav>
-      <a href="#" target="_blank">Find New Movie</a>
-      <a href="#" target="_blank">Search Your Movies</a>
+      <a href="#" target="_blank">Find New Movies</a>
+      <a href="#" target="_blank">Search Your MovieList</a>
       <button class="login" type="submit" name="login">Login</button>
       <button class="logout" type="reset" name="logout">Logout</button>
     </nav>
@@ -44,6 +49,18 @@
       <button type="button" name="watchlist">Add to Watchlist</button>
     </div>
 
+
+  <article id="moviedisplay">
+    <header></header>
+    <section></section>
+    <footer></footer>
+  </article>
+  <form>
+    Movie Title:<br>
+    <input type="text" name="movietitle"><br>
+    <button type="button" class="searchbutton">Search for Movie!</button>
+  </form>
+
     <!-- Begin cards for tracking unwatched movies -->
     <div class="tracked__card">
 
@@ -66,22 +83,8 @@
   <!-- Begin Footer -->
   <footer></footer>
 
+
   <!-- Begin Scripts -->
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
-    authDomain: "movie-history-2debf.firebaseapp.com",
-    databaseURL: "https://movie-history-2debf.firebaseio.com",
-    projectId: "movie-history-2debf",
-    storageBucket: "movie-history-2debf.appspot.com",
-    messagingSenderId: "737577620281"
-  };
-  firebase.initializeApp(config);
-  </script>
-
   <script src="./build/bundle.js"></script>
 </body>
 </html>
