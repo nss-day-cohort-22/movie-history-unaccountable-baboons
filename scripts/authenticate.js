@@ -2,15 +2,17 @@ const firebase = require("firebase")
 const observe = require("./observer")
 const $ = require("jquery")
 const form = document.getElementById("loginForm")
+const email = $(".login__email")
+const password = $(".login__password")
 
 var config = {
-    apiKey: "AIzaSyDw7EnFzuKZ8lGEx5K8hVrOX9m9lUWKLpA",
-    authDomain: "personal-site-5cb0d.firebaseapp.com",
-    databaseURL: "https://personal-site-5cb0d.firebaseio.com",
-    projectId: "personal-site-5cb0d",
-    storageBucket: "personal-site-5cb0d.appspot.com",
-    messagingSenderId: "352280088091"
-}
+    apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
+    authDomain: "movie-history-2debf.firebaseapp.com",
+    databaseURL: "https://movie-history-2debf.firebaseio.com",
+    projectId: "movie-history-2debf",
+    storageBucket: "movie-history-2debf.appspot.com",
+    messagingSenderId: "737577620281"
+};
 
 const auth = Object.create(null, {
     "activeUser": {
@@ -20,20 +22,36 @@ const auth = Object.create(null, {
     "init": {
         value: function () {
             firebase.initializeApp(config)
-
+            //click event for login
             $(".login__submit").on("click", e => {
                 // Validate login information
                 this.validate(
-                    $(".login__email").val(),
-                    $(".login__password").val()
+                    email.val(),
+                    password.val()
                 )
-
+                // Clear the form
+                form.reset()
+                // start observing
+                observe.init(this)
+            })
+            // //click event for register
+            $(".register__submit").on("click", e => {
+                debugger
+                //throw error if input fields are blank
+                if (email.val() === "" || password.val() === "") {
+                    alert("Email and password fields cannot be blank. Please check fields and try again")
+                } else {
+                    //create user in firebase DB
+                    this.createUser(
+                        email.val(),
+                        password.val()
+                    )
+                    observe.init(this)
+                    console.log("New user added to database")
+                }
                 // Clear the form
                 form.reset()
             })
-
-            // Set up authentication observer
-            observe.init(this)
         }
     },
     "validate": {
@@ -44,14 +62,30 @@ const auth = Object.create(null, {
                 .catch(function (error) {
                     const errorCode = error.code
                     const errorMessage = error.message
+                    console.log(errorMessage, "Email or password is invalid")
+                })
+            console.log("You are signed in")
+        }
+    },
+    "createUser": {
+        value: function (email, password) {
+
+            firebase
+                .auth()
+                .createUserWithEmailAndPassword(email, password)
+                .catch(function (error) {
+                    let errorCode = error.code;
+                    let errorMessage = error.message;
+                    // ...
+                    console.log(errorMessage)
                 })
         }
     },
     "logout": {
         value: function () {
-            firebase.auth().signOut().then(function() {
+            firebase.auth().signOut().then(function () {
                 // Sign-out successful.
-            }).catch(function(error) {
+            }).catch(function (error) {
                 // An error happened.
             });
         }

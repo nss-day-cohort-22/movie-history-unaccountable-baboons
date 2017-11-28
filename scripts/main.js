@@ -1,4 +1,4 @@
-//Required files...
-const starReview = require("./starEvent/toggleStarCheck");
+// Required files...
+const auth = require("./authenticate")
 
-starReview();
+auth.init()
