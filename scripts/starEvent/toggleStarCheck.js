@@ -1,8 +1,10 @@
-//Event handler to check the star upon movie review
-const starReview = function(){
-    document.querySelector("fa-star").addEventListener("click", function checked(){
-        document.querySelector("fa-star").classList.toggle("checked");
-    })
+//Required files....
+const $ = require("jquery");
+
+const starReview = function() {
+   $("span").click(function(){
+       $(this).toggleClass("checked");
+   });
 }
 
 module.exports = starReview;
