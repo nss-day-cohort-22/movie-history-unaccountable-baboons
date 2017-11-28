@@ -11,7 +11,14 @@
   <nav></nav>
 
   <header></header>
-
+  <section class="login ">
+    <form id="loginForm" method="POST">
+      Email: <input type="email" placeholder="Example@example.com" name="email"> Password: <input type="password" placeholder="Enter Password"
+        name="psw">
+    </form>
+    <button id="loginBtn" class="button" type="submit">Login</button>
+    <button id="registerBtn" class="button" type="submit">Create New Account</button>
+  </section>
   <article>
     <header></header>
     <section></section>
@@ -19,7 +26,23 @@
   </article>
 
   <footer></footer>
-
-  <script src="./scripts/main.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
+      authDomain: "movie-history-2debf.firebaseapp.com",
+      databaseURL: "https://movie-history-2debf.firebaseio.com",
+      projectId: "movie-history-2debf",
+      storageBucket: "movie-history-2debf.appspot.com",
+      messagingSenderId: "737577620281"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="./build/bundle.js"></script>
 </body>
 </html>
