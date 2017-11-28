@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Nashville Software School</title>
+  <title>Seen-ima</title>
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--Import Google Icon Font-->
@@ -31,18 +31,13 @@
   </section>
 
   <!-- Begin login form -->
-  <section class="login">
-
-    <div class="login__form">
-      <h4>Email:</h4>
-      <input type="email" name="email">
-      <h4>Password</h4>
-      <input type="password" name="password">
-    </div>
-
-    <div class="buttons"></div>
-      <button class="login" type="submit" name="login">Login</button>
-      <button class="register" type="submit" name="register">Register</button>
+  <section class="login ">
+    <form id="loginForm" method="POST">
+      Email: <input class="login__email" type="email" placeholder="Example@example.com" name="email"> Password: <input class="login__password" type="password" placeholder="Enter Password"
+        name="psw">
+    </form>
+    <button id="loginBtn" class="login__submit" type="submit">Login</button>
+    <button id="registerBtn" class="register__submit" type="submit">Create New Account</button>
   </section>
 
  <!--Begin section for filtering watched or unwatched  -->
