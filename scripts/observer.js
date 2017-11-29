@@ -1,4 +1,6 @@
 const firebase = require("firebase")
+let $ = require("jquery")
+
 
 const observer = Object.create(null, {
     "init": {
