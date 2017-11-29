@@ -46,7 +46,7 @@ const auth = Object.create(null, {
                         email.val(),
                         password.val()
                     )
-                    observe.init(this)
+                    //observe.init(this)
                     console.log("New user added to database")
                 }
                 // Clear the form
