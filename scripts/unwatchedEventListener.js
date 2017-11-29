@@ -1,4 +1,8 @@
 const movieFactory = require("./postMovieFirebase")
+const getDataFactory = require("./displayMovies")
+const firebase = require("firebase")
+
+
 let $ = require("jquery")
 
 
@@ -14,7 +18,10 @@ const unwatchedListener = function (movie) {
             "title": "",
             "year": "",
             "image": "",
-            "actors": ""
+            "actors": "",
+            "userId": firebase.auth().currentUser.uid,
+            "rating": 0,
+            "watched": false
         }
         console.log(unwatchedMovieObject, "da movie object")
         const MovieDB = require("moviedb")("5d0e08b5bfd8f7dbf4b204c7d7d5b14c");
@@ -35,6 +42,8 @@ const unwatchedListener = function (movie) {
             });
         }
         movieIdSearch(event)
+        getDataFactory.all()
+
     })
 }
 
