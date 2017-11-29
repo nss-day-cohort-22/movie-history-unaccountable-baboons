@@ -13,15 +13,7 @@ let movieFactory = Object.create(null, {
                     return $.ajax({
                         "url": `${firebaseURL}/.json?auth=${idToken}`,
                         "method": "POST",
-                        "data": JSON.stringify(object)
-                    }).then(function (response) {
-                        let movieUsersObject = {
-                            "movieId": response.name,
-                            "userId": firebase.auth().currentUser.uid,
-                            "watched": false,
-                            "rating": 0
-                        }
-                        movieFactory.addMovieUser(movieUsersObject)
+                        "data": JSON.stringify(object),
                     })
                 }).catch(function (error) {
                     console.log("did not post to firebase")
