@@ -1,4 +1,6 @@
 const movieFactory = require("./postMovieFirebase")
+let $ = require("jquery")
+
 
 //Grab movie button in HTML and add event listener
 const unwatchedListener = function (movie) {
@@ -8,18 +10,29 @@ const unwatchedListener = function (movie) {
     unwatchedButton.on("click", event => {
         console.log("YOU CLICKED!")
         console.log(event)
+        let unwatchedMovieObject = {
+            "title": "",
+            "year": "",
+            "image": "",
+            "actors": ""
+        }
+        console.log(unwatchedMovieObject, "da movie object")
         const MovieDB = require("moviedb")("5d0e08b5bfd8f7dbf4b204c7d7d5b14c");
         let movieIdSearch = function (event) {
-            MovieDB.movieInfo({ id: event.target.id }, (err, res) => {
-                console.log(res, "Movie id")
-                //Put data from click event into new object containing movie information
-                    let unwatchedMovieObject = {
-                        "title": res.title,
-                        "year": res.release_date,
-                        "image": `https://image.tmdb.org/t/p/w185${res.poster_path}`,
-                    }
-                    movieFactory.add(unwatchedMovieObject)
+            MovieDB
+            .movieInfo({ id: event.target.id }, (err, mov) => {
+                //console.log(res, "Movie id")
+                unwatchedMovieObject.title = mov.title
+                unwatchedMovieObject.year = mov.release_date
+                unwatchedMovieObject.image = `https://image.tmdb.org/t/p/w185${mov.poster_path}`
             })
+            .movieCredits ({ id: event.target.id }, (err, res) => {
+                let resArray = res.cast
+                let slicedArray = resArray.slice(0, 4)
+                unwatchedMovieObject.actors = slicedArray
+                //Put data from click event into new object containing movie information
+                movieFactory.add(unwatchedMovieObject)
+            });
         }
         movieIdSearch(event)
     })

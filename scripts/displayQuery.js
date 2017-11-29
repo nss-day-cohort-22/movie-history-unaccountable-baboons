@@ -3,7 +3,7 @@ const unwatchedListener = require("./unwatchedEventListener")
 //This page will take the results from the movie search and display them on the page.
 const $ = require("jquery")
 //Grab movie search results
- let displayMovies = function (res) {
+ let displayQuery = function (res) {
      console.log(res)
      //loop through restults using forEach loop
     res.results.forEach(function(movie){
@@ -14,4 +14,4 @@ const $ = require("jquery")
     })
 }
 
-module.exports = displayMovies
+module.exports = displayQuery
