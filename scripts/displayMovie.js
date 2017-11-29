@@ -1,6 +1,7 @@
 const unwatchedListener = require("./unwatchedEventListener")
 
 //This page will take the results from the movie search and display them on the page.
+const $ = require("jquery")
 //Grab movie search results
  let displayMovies = function (res) {
      console.log(res)

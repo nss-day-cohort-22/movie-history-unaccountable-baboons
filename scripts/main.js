@@ -1,19 +1,28 @@
-const movieListener = require("./findNewMovieEventListener")
-const movieSearch = require("./searchMovieData")
+
+
+
 const unwatchedListener = require("./unwatchedEventListener")
 
 
-movieListener()
+
 
 
 
 //Required files...
-const $ = require("jquery");
-const starReview = require("./starEvent/toggleStarCheck");
-
-// Required files...
+const $ = require("jquery")
 const auth = require("./authenticate")
+const starReview = require("./starEvent/toggleStarCheck")
+const movieListener = require("./findNewMovieEventListener")
+const movieSearch = require("./searchMovieData")
+const loginModal = require("./userLoginModal")
 
+
+
+
+// Required functions...
 
 auth.init()
+movieListener();
+starReview()
+loginModal()
 
