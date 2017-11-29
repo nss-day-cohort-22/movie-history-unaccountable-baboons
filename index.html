@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Seen-ima</title>
-  <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+
 
 
 </head>
@@ -18,7 +19,7 @@
   <header>
     <h1>MOVIE HISTORY</h1>
     <nav>
-      <a href="#" target="_blank">Find New Movies</a>
+        <a href="#" data-activates="slide-out" class="button-collapse">Find New Movies</a>
       <a href="#" target="_blank">Search Your MovieList</a>
       <button class="login" type="submit" name="login">Login</button>
       <button class="logout" type="reset" name="logout">Logout</button>
@@ -60,23 +61,22 @@
  <!--Begin section for filtering watched or unwatched  -->
   <section class="watch unwatched">
 
-    <!-- Begin Add to Watchlist Cards -->
-    <div class="watchlist__card">
-
+    <!-- <div class="watchlist__card">
+      
       <button type="button" name="watchlist">Add to Watchlist</button>
-    </div>
+    </div> -->
+    
+    
+    <!-- Begin Display Search to sideNav -->
+    <ul id="slide-out" class="side-nav fixed">
+        <li>Search by Movie Title:</li>
+        <input id="search" type="search" name="movietitle" required><button type="button" class="searchbutton materials-icons">Search for Movie!</button>
 
+    <article id="moviedisplay">
+ 
+    </article>
+  </ul>
 
-  <article id="moviedisplay">
-    <header></header>
-    <section></section>
-    <footer></footer>
-  </article>
-  <form>
-    Movie Title:<br>
-    <input type="text" name="movietitle"><br>
-    <button type="button" class="searchbutton">Search for Movie!</button>
-  </form>
 
     <!-- Begin cards for tracking unwatched movies -->
     <div class="tracked__card">
