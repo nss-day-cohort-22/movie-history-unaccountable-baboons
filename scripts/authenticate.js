@@ -4,6 +4,7 @@ const $ = require("jquery")
 const form = document.getElementById("loginForm")
 const email = $(".login__email")
 const password = $(".login__password")
+const userFactory = require("./database/userfactory")
 
 var config = {
     apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
@@ -22,6 +23,7 @@ const auth = Object.create(null, {
     "init": {
         value: function () {
             firebase.initializeApp(config)
+            observe.init(this)
             //click event for login
             $(".login__submit").on("click", e => {
                 // Validate login information
@@ -32,7 +34,6 @@ const auth = Object.create(null, {
                 // Clear the form
                 form.reset()
                 // start observing
-                observe.init(this)
             })
             // //click event for register
             $(".register__submit").on("click", e => {
@@ -75,6 +76,13 @@ const auth = Object.create(null, {
             firebase
                 .auth()
                 .createUserWithEmailAndPassword(email, password)
+                .then(function(response){
+                    let newUser = {
+                        "id": response.uid,
+                        "email": response.email
+                    }
+                    userFactory(newUser)
+                })
                 .catch(function (error) {
                     let errorCode = error.code;
                     let errorMessage = error.message;
