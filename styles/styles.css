@@ -1,3 +1,71 @@
+/* styling the rating stars */
 .checked{
-    color: tomato;
+    color: #ee6e73;
 }
+
+/* STYLING THE USER LOGIN MODAL  */
+/* Button styling */
+#myBtn {
+    margin: 50px;
+    background-color: lightseagreen;
+    color: lightcyan;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px;
+  }
+
+/* input boxes for logging in */
+#loginBoxes {
+    height: 40px;
+    text-align: center;
+    background-color: lightseagreen;
+    color: lightcyan;
+    width: 200px;
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  /* Registration Button */
+#registerButton {
+    color: white;
+    background-color: #ee6e73;
+    color: lightcyan;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 8px;
+  }
+
+
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      background-color: lightseagreen;
+      margin-top: 50px !important; /* move the modal toward the top middle of the view */
+      width: 40% !important; /* size the modal */
+  }
+  /* Modal Content/Box */
+.modal-content {
+      text-align: center;
+      margin: 5% auto;
+  }
+
+  /* The Close Button */
+  .close {
+      color: #ee6e73;
+      float: right;
+      height: 100px;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
