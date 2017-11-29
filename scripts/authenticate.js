@@ -51,6 +51,9 @@ const auth = Object.create(null, {
                 // Clear the form
                 form.reset()
             })
+            $(".logout").on("click", e => {
+                this.logout()
+            })
         }
     },
     "validate": {
@@ -84,6 +87,7 @@ const auth = Object.create(null, {
         value: function () {
             firebase.auth().signOut().then(function () {
                 // Sign-out successful.
+                console.log("You have signed out")
             }).catch(function (error) {
                 // An error happened.
             });
