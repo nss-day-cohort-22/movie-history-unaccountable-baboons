@@ -1,8 +1,10 @@
-
 const movieListener = require("./findNewMovieEventListener")
 const movieSearch = require("./searchMovieData")
+const unwatchedListener = require("./unwatchedEventListener")
 
-movieListener();
+
+movieListener()
+
 
 
 //Required files...
