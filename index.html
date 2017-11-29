@@ -16,49 +16,57 @@
 <body>
   <!-- Begin Main Navigation -->
   <header>
-    <h1>MOVIE HISTORY</h1>
+
     <nav>
       <a href="#" target="_blank">Find New Movies</a>
       <a href="#" target="_blank">Search Your MovieList</a>
-      <button class="login" type="submit" name="login">Login</button>
-      <button class="logout" type="reset" name="logout">Logout</button>
-    </nav>
-  </header>
+      <!-- <button class="login" type="submit" name="login">Login</button>
+      <button class="logout" type="reset" name="logout">Logout</button> -->
+
+
 
   <!-- Begin Welcome message -->
-  <section class="welcome">
+  <!-- <section class="welcome">
 
-  </section>
-
-  <!-- Begin login form -->
-  <section class="login ">
-    <form id="loginForm" method="POST">
-      Email: <input class="login__email" type="email" placeholder="Example@example.com" name="email"> Password: <input class="login__password" type="password" placeholder="Enter Password"
-        name="psw">
-    </form>
-    <button id="loginBtn" class="login__submit" type="submit">Login</button>
-    <button id="registerBtn" class="register__submit" type="submit">Create New Account</button>
-  </section>
+  </section> -->
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Register</button>
-
+<div class="floatRight">
+<button class="chip" id="myBtn">Login/Register</button>
+</div>
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <input id="loginBoxes" type="text" placeholder="Username"></input>
-    <input id="loginBoxes" type="text" placeholder="Password"></input><br>
-    <button id="registerButton">Sign Me Up!</button><br>
+    <form id="loginForm" method="POST">
+    <input class="login__email" id="loginBoxes" type="email" placeholder="Enter Email"></input>
+    <input class="login__password" id="loginBoxes" type="text" placeholder="Enter Password"></input><br>
+  </form>
+    <button class="register__submit chip" type="submit" id="loginRegisterButton">Sign Me Up!</button>
+    <button class="login__submit chip" type="submit" id="loginRegisterButton">Log In</button><br>
   <a href="#">I forgot my password</a>
   </div>
 </div>
+</nav>
+</header>
+
+
+  <!-- Begin login form -->
+  <!-- <section class="login ">
+    <form id="loginForm" method="POST">
+      Email: <input class="login__email" type="email" placeholder="Example@example.com" name="email"> Password: <input class="login__password" type="password" placeholder="Enter Password"
+        name="psw">
+    </form>
+    <button id="loginBtn" class="login__submit" type="submit">Login</button>
+    <button id="registerBtn" class="register__submit" type="submit">Create New Account</button>
+  </section> -->
 
 
  <!--Begin section for filtering watched or unwatched  -->
-  <section class="watch unwatched">
+ <h1>Movie History</h1>
+ <section class="watch unwatched">
 
     <!-- Begin Add to Watchlist Cards -->
     <div class="watchlist__card">
