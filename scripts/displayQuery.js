@@ -16,7 +16,7 @@ const unwatchedListener = require("./unwatchedEventListener")
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">${movie.title}<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <button id="${movie.id}" type="button" class="addunwatched">Add Movie to List</button>
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">${movie.title}<i class="material-icons right">close</i></span>
