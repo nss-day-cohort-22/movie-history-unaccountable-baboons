@@ -18,7 +18,7 @@ const observer = Object.create(null, {
                     console.log(userid)
                     modal.hide(); //hiding the modal
                     displayUser(user); //calls the module to display the username
-                    displayUserMovies(userid)
+                    displayUserMovies(userid,false)
                     // nav.init(true)
                     // nav.hideLogin()
                 } else {

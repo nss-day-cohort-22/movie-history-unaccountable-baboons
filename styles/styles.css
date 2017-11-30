@@ -113,3 +113,8 @@ span.card-title {
     font-size: 2rem;
 }
 
+/* Watched/Unwatched Bar */
+div.unwatched {
+    background-color: tomato;
+    text-align: center;
+}
