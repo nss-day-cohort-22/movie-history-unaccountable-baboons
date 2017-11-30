@@ -7,6 +7,8 @@ let displayMovies = require("./displayMovies")
 let displayUserMovies = require("./onLogin/displayUserMovies")
 let addEventListenersDisplayBar = require("./addEventListenersDisplayBar")
 
+const searchSaved = require("./searchSavedMovies")
+
 const observer = Object.create(null, {
     "init": {
         value: function (auth) {
@@ -21,6 +23,8 @@ const observer = Object.create(null, {
                     modal.hide(); //hiding the modal
                     displayUser(user); //calls the module to display the username
                     displayUserMovies(userid,false)
+                    $(".searchSavedInput").hide()
+                    searchSaved()
                     addEventListenersDisplayBar(userid)
                     // nav.init(true)
                     // nav.hideLogin()
@@ -28,6 +32,7 @@ const observer = Object.create(null, {
                     console.log("Not Authenticated")
                     // nav.init(false)
                     auth.activeUser = null
+                    $(".searchSavedInput").hide()
                 }
             })
         }
