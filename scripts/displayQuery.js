@@ -4,7 +4,7 @@ const unwatchedListener = require("./unwatchedEventListener")
 const $ = require("jquery")
 //Grab movie search results
  let displayQuery = function (res) {
-     console.log(res)
+     //console.log(res)
      //loop through restults using forEach loop
     res.results.forEach(function(movie){
         //create article tags to place the displayed material into and display them onto the HTML
