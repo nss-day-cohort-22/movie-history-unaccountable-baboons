@@ -10,7 +10,7 @@ const unwatchedListener = require("./unwatchedEventListener")
 
         //create side navigation display card
 
-    $("#moviedisplay").append(`<div class="card">
+    $("#moviedisplay").append(`<div class="card small">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="https://image.tmdb.org/t/p/w185${movie.poster_path}">
     </div>
