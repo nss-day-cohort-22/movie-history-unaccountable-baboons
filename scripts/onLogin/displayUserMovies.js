@@ -55,7 +55,7 @@ let displayUserMovies = function(user, boolean = false){
             userMovies.forEach(movie => {
                 // let $movieHTML = $("<article></article>").html(`${movie.title}<br> <img src=${movie.image}><button id=${movie.id} type="button" class="rateme">RateMe</button>`);
                 // $(".tracked__card").append($movieHTML);
-                `<div class="col s4"><div class="card small">
+                $(".tracked__card").append(`<div class="col s4"><div class="card small">
                 <div class="card-image">
                   <img src=${movie.image}>
                   <span class="card-title"></span>
@@ -73,12 +73,10 @@ let displayUserMovies = function(user, boolean = false){
                   </p>
                 </div>
                 <div class="card-action">
-                <div class="chip">
-                <i id ="${movie.id}class="close material-icons">Close Me!</i>
-              </div>
+                <button id=${movie.id} type="button" class="watch">Seen It!</button>
                 </div>
               </div>
-              </div>`
+              </div>`)
             })
 
         }
