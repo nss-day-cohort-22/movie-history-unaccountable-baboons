@@ -3,6 +3,8 @@ let $ = require("jquery")
 let displayMovies = require("./displayMovies")
 let displayUserMovies = require("./onLogin/displayUserMovies")
 
+const searchSaved = require("./searchSavedMovies")
+
 const observer = Object.create(null, {
     "init": {
         value: function (auth) {
@@ -13,6 +15,7 @@ const observer = Object.create(null, {
                     userid = auth.activeUser.uid
                     console.log(userid)
                     displayUserMovies(userid)
+                    searchSaved()
                     // nav.init(true)
                     // nav.hideLogin()
                 } else {
