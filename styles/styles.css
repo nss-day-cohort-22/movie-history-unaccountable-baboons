@@ -1,70 +1,82 @@
+a {
+    color: #91219E !important;
+    padding-right: 20px;
+}
+
 /* styling the rating stars */
 .checked{
-    color: #ee6e73;
+    color:tomato;
 }
 
 /* STYLING THE USER LOGIN MODAL  */
 /* Button styling */
 #myBtn {
-    margin: 50px;
-    background-color: lightseagreen;
-    color: lightcyan;
-    height: 40px;
+    margin: 10px;
+    background-color: tomato;
+    color: #4F2F4F;
+    height: 45px;
     font-size: 16px;
     padding: 5px;
+    border-radius: 6px;
   }
 
 /* input boxes for logging in */
 #loginBoxes {
     height: 40px;
     text-align: center;
-    background-color: lightseagreen;
-    color: lightcyan;
+    background-color: #91219E;
+    color: rgb(71, 9, 66);
     width: 200px;
     font-size: 16px;
     margin-bottom: 14px;
+    border-radius: 6px;
   }
 
-  /* Registration Button */
-#registerButton {
-    color: white;
-    background-color: #ee6e73;
-    color: lightcyan;
+/* Registration Button */
+#loginRegisterButton {
+    color:#4F2F4F;
+    background-color: tomato;
     height: 40px;
     font-size: 16px;
     padding: 5px;
     margin-bottom: 8px;
+    border-radius: 6px;
   }
 
+.floatRight {
+    float:right;
+    height: 45px !important;
+  }
 
-  /* The Modal (background) */
-  .modal {
+/* The Modal (background) */
+.modal {
       display: none; /* Hidden by default */
       position: fixed; /* Stay in place */
       z-index: 1; /* Sit on top */
       left: 0;
       top: 0;
-      background-color: lightseagreen;
+      background-color: #91219E;
       margin-top: 50px !important; /* move the modal toward the top middle of the view */
       width: 40% !important; /* size the modal */
   }
-  /* Modal Content/Box */
+/* Modal Content/Box */
 .modal-content {
       text-align: center;
       margin: 5% auto;
   }
 
-  /* The Close Button */
-  .close {
-      color: #ee6e73;
-      float: right;
+/* The Close Button */
+.close {
+      color: tomato;
+      position: absolute;
+      right: 40px;
       height: 100px;
       font-size: 28px;
       font-weight: bold;
   }
 
-  .close:hover,
-  .close:focus {
+.close:hover,
+.close:focus {
       color: black;
       text-decoration: none;
       cursor: pointer;
