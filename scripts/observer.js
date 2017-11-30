@@ -14,14 +14,16 @@ const observer = Object.create(null, {
                     auth.activeUser = user
                     userid = auth.activeUser.uid
                     console.log(userid)
-                    searchSaved()
                     displayUserMovies(userid,false)
+                    $(".searchSavedInput").hide()
+                    searchSaved()
                     // nav.init(true)
                     // nav.hideLogin()
                 } else {
                     console.log("Not Authenticated")
                     // nav.init(false)
                     auth.activeUser = null
+                    $(".searchSavedInput").hide()
                 }
             })
         }
