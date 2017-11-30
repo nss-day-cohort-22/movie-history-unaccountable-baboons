@@ -10,8 +10,11 @@ const filterSaved = function () {
 
                 const filteredMovies = getDataFactory.cache.filter(
                     title => {
-                        const matchingTitle = article.title.toLowerCase().includes(pattern)
+                        const matchingTitle = getDataFactory.cache.movie.title.toLowerCase().includes(pattern)
+
+                        return matchingTitle
                     })
                 }
+                //display filtered movies
             })
         }
