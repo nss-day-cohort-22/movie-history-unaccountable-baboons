@@ -1,6 +1,6 @@
 let auth = require("./authenticate")
 let firebase = require("firebase")
-let $ = require("jquery")
+
 
 let firebaseURL = "https://movie-history-2debf.firebaseio.com/movies"
 let firebaseMovieUsersURL = "https://movie-history-2debf.firebaseio.com/movieusers"

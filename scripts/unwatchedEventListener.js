@@ -9,12 +9,13 @@ let $ = require("jquery")
 //Grab movie button in HTML and add event listener
 const unwatchedListener = function (movie) {
     let unwatchedButton = $(`#${movie.id}`)
-    console.log(unwatchedButton)
+    //console.log(unwatchedButton)
     //Attach click event listener to button
     unwatchedButton.on("click", event => {
         console.log("YOU CLICKED!")
-        console.log(event)
+        //console.log(event)
         let unwatchedMovieObject = {
+            "id":"",
             "title": "",
             "year": "",
             "image": "",
@@ -23,12 +24,13 @@ const unwatchedListener = function (movie) {
             "rating": 0,
             "watched": false
         }
-        console.log(unwatchedMovieObject, "da movie object")
+        //console.log(unwatchedMovieObject, "da movie object")
         const MovieDB = require("moviedb")("5d0e08b5bfd8f7dbf4b204c7d7d5b14c");
         let movieIdSearch = function (event) {
             MovieDB
             .movieInfo({ id: event.target.id }, (err, mov) => {
                 //console.log(res, "Movie id")
+                unwatchedMovieObject.id = mov.id
                 unwatchedMovieObject.title = mov.title
                 unwatchedMovieObject.year = mov.release_date
                 unwatchedMovieObject.image = `https://image.tmdb.org/t/p/w185${mov.poster_path}`
@@ -42,7 +44,6 @@ const unwatchedListener = function (movie) {
             });
         }
         movieIdSearch(event)
-        getDataFactory.all()
 
     })
 }

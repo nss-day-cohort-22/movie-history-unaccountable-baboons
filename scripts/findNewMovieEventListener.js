@@ -1,4 +1,4 @@
-const $ = require("jquery")
+
 const movieSearch = require("./searchMovieData")
 
 //Grab movie button in HTML and add event listener
