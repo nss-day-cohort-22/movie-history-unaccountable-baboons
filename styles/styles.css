@@ -3,6 +3,8 @@ a {
     padding-right: 20px;
 }
 
+
+
 /* styling the rating stars */
 .checked{
     color:tomato;
@@ -50,7 +52,7 @@ a {
 
 /* The Modal (background) */
 .modal {
-      display: none; /* Hidden by default */
+      display: none;
       position: fixed; /* Stay in place */
       z-index: 1; /* Sit on top */
       left: 0;
@@ -81,3 +83,7 @@ a {
       text-decoration: none;
       cursor: pointer;
   }
+
+  .hidden {
+    display: none;
+}

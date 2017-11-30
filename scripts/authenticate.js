@@ -6,6 +6,7 @@ const email = $(".login__email")
 const password = $(".login__password")
 const userFactory = require("./database/userfactory")
 
+
 var config = {
     apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
     authDomain: "movie-history-2debf.firebaseapp.com",
@@ -68,6 +69,7 @@ const auth = Object.create(null, {
                     console.log(errorMessage, "Email or password is invalid")
                 })
             console.log("You are signed in")
+
         }
     },
     "createUser": {
