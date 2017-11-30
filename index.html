@@ -25,22 +25,19 @@
       <button class="logout" type="reset" name="logout">Logout</button> -->
 
 
-
-  <!-- Begin Welcome message -->
-  <!-- <section class="welcome">
-
-  </section> -->
-
 <!-- Trigger/Open The Modal -->
 <div class="floatRight">
-<button class="chip" id="myBtn">Login/Register</button>
+<button class="chip myButton" id="myBtn">Login/Register</button>
+<div id="userLoggedIn" class="loggedIn hidden">
+  <span id="username"></span>
+    <a class="logout" href="#">Logout</a>
+</div>
 </div>
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="loginModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
     <form id="loginForm" method="POST">
     <input class="login__email" id="loginBoxes" type="email" placeholder="Enter Email"></input>
     <input class="login__password" id="loginBoxes" type="text" placeholder="Enter Password"></input><br>
@@ -68,7 +65,7 @@
 <!-- Begin Display Search to sideNav -->
 <ul id="slide-out" class="side-nav fixed">
   <li>Search by Movie Title:</li>
- 
+
   <div class="search-wrapper card focused">
     <input id="search" type="search" name="movietitle" required><label class="label-icon" for="search"><i class="searchbutton material-icons">search</i></label>
 

@@ -8,6 +8,7 @@ const movieSearch = require("./searchMovieData")
 const loginModal = require("./userLoginModal")
 const unwatchedListener = require("./unwatchedEventListener")
 const displaySideNav = require("./displaySideNav")
+const firebase = require("firebase")
 
 // Required functions...
 
