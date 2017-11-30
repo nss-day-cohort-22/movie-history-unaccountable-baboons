@@ -1,8 +1,10 @@
 const firebase = require("firebase")
-const $ = require("jquery")
 const loginButton = $(".myButton")
 const modal = $("#loginModal")
 const displayUser = require("./dispUser")
+let $ = require("jquery")
+let displayMovies = require("./displayMovies")
+let displayUserMovies = require("./onLogin/displayUserMovies")
 
 const observer = Object.create(null, {
     "init": {
@@ -14,6 +16,10 @@ const observer = Object.create(null, {
                     modal.hide(); //hiding the modal
                     loginButton.hide(); //hiding the login button
                     displayUser();
+                    auth.activeUser = user
+                    userid = auth.activeUser.uid
+                    console.log(userid)
+                    displayUserMovies(userid)
                     // nav.init(true)
                     // nav.hideLogin()
                 } else {
