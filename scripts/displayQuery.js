@@ -4,7 +4,7 @@ const unwatchedListener = require("./unwatchedEventListener")
 
 //Grab movie search results
  let displayQuery = function (res) {
-     console.log(res)
+     //console.log(res)
      //loop through restults using forEach loop
     res.results.forEach(function(movie){
 
