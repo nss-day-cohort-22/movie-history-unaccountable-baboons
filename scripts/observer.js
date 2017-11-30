@@ -1,5 +1,8 @@
 const firebase = require("firebase")
 let $ = require("jquery")
+const loginButton = $(".myButton")
+const modal = $("#loginModal")
+const displayUser = require("./displayUsernameLogout")
 let displayMovies = require("./displayMovies")
 let displayUserMovies = require("./onLogin/displayUserMovies")
 let addEventListenersDisplayBar = require("./addEventListenersDisplayBar")
@@ -10,8 +13,13 @@ const observer = Object.create(null, {
             firebase.auth().onAuthStateChanged(function(user) {
                 if (user) {
                     console.log("Authenticated")
+                    auth.activeUser = user // user is now logged in successfully
                     auth.activeUser = user
                     userid = auth.activeUser.uid
+
+                    console.log(userid)
+                    modal.hide(); //hiding the modal
+                    displayUser(user); //calls the module to display the username
                     displayUserMovies(userid,false)
                     addEventListenersDisplayBar(userid)
                     // nav.init(true)
