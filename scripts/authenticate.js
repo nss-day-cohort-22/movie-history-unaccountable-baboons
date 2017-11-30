@@ -1,5 +1,6 @@
 const firebase = require("firebase")
 const observe = require("./observer")
+let $ = require("jquery")
 
 const form = document.getElementById("loginForm")
 const email = $(".login__email")

@@ -1,16 +1,17 @@
 
-const $ = require("jquery")
 const firebase = require("firebase")
-const userEl = document.getElementsByClassName("loggedIn");
-let user = firebase.auth().currentUser
-console.log(user)
-const dispUser = function(){
+const auth = require("./authenticate")
+const userEl = document.getElementsByClassName("loggedIn")[0];
+let user = auth.activeuser
+console.log("Deanna - Display", user)
+// console.log(firebase.auth().currentUser)
 
-
+const dispUser = function(user){
+console.log(user.email)
     userEl.innerHTML =
     `
-    <p>Welcome ${user} </p>
-    <a href=#>Logout</a>
+    <span>Welcome ${user.email} </span>
+    <a href="#">Logout</a>
     `;
 }
 

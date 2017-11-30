@@ -18,9 +18,8 @@ var span = document.getElementsByClassName("close")[0];
 btn.addEventListener("click", function() {
     $(".modal").show();
 
-})
-
-
+    })
+}
 
 // document.addEventListener("click", function(event){
 //     if (event.target === modal){
@@ -38,6 +37,6 @@ btn.addEventListener("click", function() {
 //         modal.style.display = "none";
 //     }
 // }
-}
+
 
 module.exports = userLoginModal

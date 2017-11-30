@@ -1,8 +1,8 @@
 const firebase = require("firebase")
+let $ = require("jquery")
 const loginButton = $(".myButton")
 const modal = $("#loginModal")
-const displayUser = require("./dispUser")
-let $ = require("jquery")
+const displayUser = require("./displayUsernameLogout")
 let displayMovies = require("./displayMovies")
 let displayUserMovies = require("./onLogin/displayUserMovies")
 
@@ -15,7 +15,7 @@ const observer = Object.create(null, {
                     auth.activeUser = user // user is now logged in successfully
                     modal.hide(); //hiding the modal
                     loginButton.hide(); //hiding the login button
-                    displayUser();
+                    displayUser(user);
                     auth.activeUser = user
                     userid = auth.activeUser.uid
                     console.log(userid)
