@@ -81,3 +81,18 @@ a {
       text-decoration: none;
       cursor: pointer;
   }
+
+  /* Display New Movies_SideNav */
+.search-wrapper i.material-icons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+div.search-wrapper.card {
+    height: 43px;
+}
+
+span.card-title {
+    font-size: 2rem;
+}

@@ -3,7 +3,6 @@ const firebase = require("firebase")
 let auth = require("./authenticate")
 
 let firebaseURL = "https://movie-history-2debf.firebaseio.com/movies"
-let firebaseMovieUsersURL = "https://movie-history-2debf.firebaseio.com/movieusers"
 
 const getDataFactory = Object.create(null, {
     "cache": {
@@ -12,19 +11,18 @@ const getDataFactory = Object.create(null, {
     },
     "all": {
         value: function () {
+            //perform ajax call on firebase movies key and cache them as an array
             return firebase.auth().currentUser.getIdToken(true).then(idToken =>{
                 return $.ajax({
-                    "url": `${firebaseMovieUsersURL}/.json?auth=${idToken}`,
+                    "url": `${firebaseURL}/.json?auth=${idToken}`,
                     "method": "GET"
-                }).then(data => {
-                    this.cache = Object.keys(data)
-                        .map(key => {
-                            data[key].id = key
-                            return data[key]
-                        })
-                        debugger
-                    console.log(getDataFactory.cache)
-                    //return this.cache
+                }).then(movies => {
+                    this.cache = Object.keys(movies)
+                    .map(key => {
+                        movies[key].id = key
+                        return movies[key]
+                    })
+                    return this.cache
                 })
 
             })
