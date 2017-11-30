@@ -16,26 +16,12 @@
     "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
     "grunt-contrib-watch": "^1.0.0",
     "gruntify-eslint": "^4.0.0",
-    "moviedb": "^0.2.10",
-    "browserify": "^14.5.0",
-    "browserify-shim": "^3.8.14"
+    "moviedb": "^0.2.10"
   },
   "dependencies": {
     "firebase": "^4.6.2",
     "jquery": "^3.2.1",
+    "materialize": "^1.0.0",
     "materialize-css": "^0.100.2"
-  },
-  "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.js",
-    "materialize": "./node_modules/materialize-css/dist/js/materialize.js"
-  },
-  "browserify-shim": {
-    "jquery": "$",
-    "materialize": "materialize"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
   }
 }

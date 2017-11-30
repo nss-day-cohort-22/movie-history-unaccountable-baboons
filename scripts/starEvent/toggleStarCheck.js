@@ -1,5 +1,6 @@
 
 //Required files....
+const $ = require("jquery");
 
 const starReview = function() {
    $("span").click(function(){
