@@ -10,13 +10,13 @@ const unwatchedListener = require("./unwatchedEventListener")
 
         //create side navigation display card
 
-    $("#moviedisplay").append(`<div class="card">
+    $("#moviedisplay").append(`<div class="card small">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="https://image.tmdb.org/t/p/w185${movie.poster_path}">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">${movie.title}<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <p><button id=${movie.id} type="button" class="addunwatched">Add Movie to List</button></p>
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">${movie.title}<i class="material-icons right">close</i></span>

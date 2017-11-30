@@ -84,18 +84,29 @@ a {
       cursor: pointer;
   }
 
-<<<<<<< HEAD
+
   .hidden {
     display: none;
 }
-=======
+
   /* Display New Movies_SideNav */
-  /* #moviedisplay div h2 {
-      font-size: 1.5rem;
-      text-align: center;
-  }
+.search-wrapper i.material-icons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+div.search-wrapper.card {
+    height: 43px;
+}
+
 
   .card-content {
       font-size: .5rem;
   } */
->>>>>>> master
+
+
+span.card-title {
+    font-size: 2rem;
+}
+
