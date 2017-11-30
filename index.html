@@ -28,7 +28,10 @@
 <!-- Trigger/Open The Modal -->
 <div class="floatRight">
 <button class="chip myButton" id="myBtn">Login/Register</button>
-<div class="loggedIn"></div>
+<div id="userLoggedIn" class="loggedIn hidden">
+  <span id="username"></span>
+    <a class="logout" href="#">Logout</a>
+</div>
 </div>
 <!-- The Modal -->
 <div id="loginModal" class="modal">
@@ -62,7 +65,7 @@
 <!-- Begin Display Search to sideNav -->
 <ul id="slide-out" class="side-nav fixed">
   <li>Search by Movie Title:</li>
- 
+
   <div class="search-wrapper card focused">
     <input id="search" type="search" name="movietitle" required><label class="label-icon" for="search"><i class="searchbutton material-icons">search</i></label>
     <!-- <button type="button" class="searchbutton materials-icons">Search for Movie!</button> -->

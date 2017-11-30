@@ -13,12 +13,11 @@ const observer = Object.create(null, {
                 if (user) {
                     console.log("Authenticated")
                     auth.activeUser = user // user is now logged in successfully
-                    modal.hide(); //hiding the modal
-                    loginButton.hide(); //hiding the login button
-                    displayUser(user);
                     auth.activeUser = user
                     userid = auth.activeUser.uid
                     console.log(userid)
+                    modal.hide(); //hiding the modal
+                    displayUser(user); //calls the module to display the username
                     displayUserMovies(userid)
                     // nav.init(true)
                     // nav.hideLogin()

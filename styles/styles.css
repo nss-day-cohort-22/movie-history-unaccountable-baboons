@@ -26,7 +26,7 @@ a {
 #loginBoxes {
     height: 40px;
     text-align: center;
-    background-color: #91219E;
+    background-color: #fff;
     color: rgb(71, 9, 66);
     width: 200px;
     font-size: 16px;
@@ -85,7 +85,7 @@ a {
   }
 
 
-  .hidden {
+.hidden {
     display: none;
 }
 
@@ -96,12 +96,15 @@ a {
     top: 10px;
 }
 
+.loggedIn {
+    margin-right: 10px;
+}
+
 div.search-wrapper.card {
     height: 43px;
 }
 
-
-  .card-content {
+.card-content {
       font-size: .5rem;
   } */
 

@@ -32,7 +32,10 @@ const auth = Object.create(null, {
                 this.validate(
                     email.val(),
                     password.val()
+
                 )
+                $("#myBtn").addClass("hidden") //hiding the login button
+                $("#userLoggedIn").removeClass("hidden")
                 // Clear the form
                 form.reset()
                 // start observing
@@ -50,12 +53,17 @@ const auth = Object.create(null, {
                     )
                     //observe.init(this)
                     console.log("New user added to database")
+                    $("#myBtn").addClass("hidden") //hiding the login button
+                    $("#userLoggedIn").removeClass("hidden")
                 }
                 // Clear the form
                 form.reset()
             })
             $(".logout").on("click", e => {
+                console.log("logout")
                 this.logout()
+                $("#userLoggedIn").addClass("hidden")
+                $("#myBtn").removeClass("hidden") //showing the login button
             })
         }
     },
