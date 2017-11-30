@@ -1,7 +1,14 @@
+/* Header Styles */
+header > nav {
+    background-color: tomato;
+}
+/* Link Styles */
 a {
     color: #91219E !important;
     padding-right: 20px;
 }
+
+
 
 /* styling the rating stars */
 .checked{
@@ -24,7 +31,7 @@ a {
 #loginBoxes {
     height: 40px;
     text-align: center;
-    background-color: #91219E;
+    background-color: #fff;
     color: rgb(71, 9, 66);
     width: 200px;
     font-size: 16px;
@@ -50,7 +57,7 @@ a {
 
 /* The Modal (background) */
 .modal {
-      display: none; /* Hidden by default */
+      display: none;
       position: fixed; /* Stay in place */
       z-index: 1; /* Sit on top */
       left: 0;
@@ -82,6 +89,11 @@ a {
       cursor: pointer;
   }
 
+
+.hidden {
+    display: none;
+}
+
   /* Display New Movies_SideNav */
 .search-wrapper i.material-icons {
     position: absolute;
@@ -89,9 +101,18 @@ a {
     top: 10px;
 }
 
+.loggedIn {
+    margin-right: 10px;
+}
+
 div.search-wrapper.card {
     height: 43px;
 }
+
+.card-content {
+      font-size: .5rem;
+  } */
+
 
 span.card-title {
     font-size: 2rem;

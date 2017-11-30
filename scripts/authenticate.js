@@ -1,10 +1,12 @@
 const firebase = require("firebase")
 const observe = require("./observer")
+let $ = require("jquery")
 
 const form = document.getElementById("loginForm")
 const email = $(".login__email")
 const password = $(".login__password")
 const userFactory = require("./database/userfactory")
+
 
 var config = {
     apiKey: "AIzaSyDOvk0tq_BKiUfsMmjJJdy-Sx5HZzwhgXM",
@@ -30,7 +32,10 @@ const auth = Object.create(null, {
                 this.validate(
                     email.val(),
                     password.val()
+
                 )
+                $("#myBtn").addClass("hidden") //hiding the login button
+                $("#userLoggedIn").removeClass("hidden")
                 // Clear the form
                 form.reset()
                 // start observing
@@ -48,12 +53,17 @@ const auth = Object.create(null, {
                     )
                     //observe.init(this)
                     console.log("New user added to database")
+                    $("#myBtn").addClass("hidden") //hiding the login button
+                    $("#userLoggedIn").removeClass("hidden")
                 }
                 // Clear the form
                 form.reset()
             })
             $(".logout").on("click", e => {
+                console.log("logout")
                 this.logout()
+                $("#userLoggedIn").addClass("hidden")
+                $("#myBtn").removeClass("hidden") //showing the login button
             })
         }
     },
@@ -68,6 +78,7 @@ const auth = Object.create(null, {
                     console.log(errorMessage, "Email or password is invalid")
                 })
             console.log("You are signed in")
+
         }
     },
     "createUser": {

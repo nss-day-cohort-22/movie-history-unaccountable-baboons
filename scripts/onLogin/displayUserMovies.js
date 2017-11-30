@@ -17,8 +17,32 @@ let displayUserMovies = function(user, boolean = false){
             })
             //write all of the users movies to the dom
             userMovies.forEach(movie => {
-                let $movieHTML = $("<article></article>").html(`${movie.title}<br> <img src=${movie.image}><button id=${movie.id} type="button" class="watch">I've watched this</button>`);
-                $(".tracked__card").append($movieHTML);
+                // let $movieHTML = $("<article></article>").html(`${movie.title}<br> <img src=${movie.image}><button id=${movie.id} type="button" class="watch">I've watched this</button>`);
+                // $(".tracked__card").append($movieHTML);
+
+               $(".tracked__card").append(`<div class="col s4"><div class="card small">
+                   <div class="card-image">
+                     <img src=${movie.image}>
+                     <span class="card-title"></span>
+                   </div>
+                   <div class="card-content">
+                     <p>${movie.title}<br> 
+                     ${movie.year}
+                     <div class="rated__card">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                     </p>
+                   </div>
+                   <div class="card-action">
+                   <button id=${movie.id} type="button" class="watch">Seen It!</button>
+                   </div>
+                 </div>
+                 </div>`)
+
                 watchedMovieListener(movie)
             })
 
@@ -29,8 +53,30 @@ let displayUserMovies = function(user, boolean = false){
             })
             //write all of the users movies to the dom
             userMovies.forEach(movie => {
-                let $movieHTML = $("<article></article>").html(`${movie.title}<br> <img src=${movie.image}><button id=${movie.id} type="button" class="rateme">RateMe</button>`);
-                $(".tracked__card").append($movieHTML);
+                // let $movieHTML = $("<article></article>").html(`${movie.title}<br> <img src=${movie.image}><button id=${movie.id} type="button" class="rateme">RateMe</button>`);
+                // $(".tracked__card").append($movieHTML);
+                $(".tracked__card").append(`<div class="col s4"><div class="card small">
+                <div class="card-image">
+                  <img src=${movie.image}>
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p>${movie.title}<br> 
+                  ${movie.year}
+                  <div class="rated__card">
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+                 </div>
+                  </p>
+                </div>
+                <div class="card-action">
+                <button id=${movie.id} type="button" class="watch">Seen It!</button>
+                </div>
+              </div>
+              </div>`)
             })
 
         }

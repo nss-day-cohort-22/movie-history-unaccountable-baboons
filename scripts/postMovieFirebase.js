@@ -3,7 +3,6 @@ let firebase = require("firebase")
 
 
 let firebaseURL = "https://movie-history-2debf.firebaseio.com/movies"
-let firebaseMovieUsersURL = "https://movie-history-2debf.firebaseio.com/movieusers"
 
 let movieFactory = Object.create(null, {
     "add": {
@@ -20,14 +19,14 @@ let movieFactory = Object.create(null, {
                 })
         }
     },
-    "addMovieUser": {
-        value: function (object) {
+    "updateMovieUser": {
+        value: function (movie, id) {
             return firebase.auth().currentUser.getIdToken(true)
                 .then(idToken => {
                     return $.ajax({
-                        "url": `${firebaseMovieUsersURL}/.json?auth=${idToken}`,
-                        "method": "POST",
-                        "data": JSON.stringify(object)
+                        "url": `${firebaseURL}/${id}/.json?auth=${idToken}`,
+                        "method": "PUT",
+                        "data": JSON.stringify(movie)
                     })
 
                 })
