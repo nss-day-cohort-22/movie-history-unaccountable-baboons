@@ -7,6 +7,7 @@ const searchSaved = function () {
         document.querySelector("input[name='trackedMovieFilter']").addEventListener(
             "keyup",
             event => {
+                let $movieHTML = ""
                 if (event.target.value.length >= 3) {
                     // Get lower case version of user input
                     const userInput = event.target.value
