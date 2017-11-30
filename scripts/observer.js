@@ -2,6 +2,7 @@ const firebase = require("firebase")
 let $ = require("jquery")
 let displayMovies = require("./displayMovies")
 let displayUserMovies = require("./onLogin/displayUserMovies")
+let addEventListenersDisplayBar = require("./addEventListenersDisplayBar")
 
 const observer = Object.create(null, {
     "init": {
@@ -13,6 +14,8 @@ const observer = Object.create(null, {
                     userid = auth.activeUser.uid
                     console.log(userid)
                     displayUserMovies(userid,false)
+                    debugger
+                    addEventListenersDisplayBar(userid)
                     // nav.init(true)
                     // nav.hideLogin()
                 } else {
